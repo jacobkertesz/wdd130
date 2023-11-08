@@ -184,6 +184,45 @@ footer a {
 footer a:hover {
     color: white;
 }
+
+.rivers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#rivers-img {
+    width: 100%;
+    height: 500px;
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+#img-text {
+    grid-column: 4/6;
+    grid-row: 1/2;
+    padding: 25px;
+}
+#section-title {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 0%;
+}
+#info {
+    grid-column: 1/6;
+    grid-row: 3/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+    margin-top: 50px;
+    
+}
+#info div {
+    padding: 25px;
+    border: solid 5px #35524A;
+}
+#arizona h2 {
+    padding-bottom: 44px;
+}
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
