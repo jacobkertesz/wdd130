@@ -25,7 +25,7 @@ nav {
     color: #E79556;
     text-decoration: none;
 }
-.title:hover {
+a:hover {
     color: white;
     background-color: #7BE0AD;
 }
@@ -99,4 +99,10 @@ footer {
 footer h2:nth-of-type(2):hover {
     color: white;
     background-color: #7BE0AD;
+}
+footer a {
+    font-family: "Ubuntu", Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #2C462B;
+    text-decoration: none;
 }
