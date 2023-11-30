@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wild Wyoming | Flora</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
@@ -19,9 +20,9 @@
         <h3 id="page-name">Flora</h3>
         <section class="tab-grid">
             <div class="tab">
-                <button class="tablinks" onclick="open(event, 'nettle')">Stinging Nettle</button>
-                <button class="tablinks" onclick="open(event, 'pine')">Lodgepole Pine</button>
-                <button class="tablinks" onclick="open(event, 'paint')">Indian Paintbrush</button>
+                <button class="tablinks" onclick="openInfo(event, 'nettle')" id="defaultOpen">Stinging Nettle</button>
+                <button class="tablinks" onclick="openInfo(event, 'pine')">Lodgepole Pine</button>
+                <button class="tablinks" onclick="openInfo(event, 'paint')">Indian Paintbrush</button>
             </div>
             <div id="nettle" class="tabcontent">
                 <h2>Stinging Nettle:</h2>
@@ -65,5 +66,29 @@
           <a href="site-plan.html">Site Plan</a>
         </h2>
     </footer>
+    <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        function openInfo(evt, infoName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+        
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+        
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+        
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(infoName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>
