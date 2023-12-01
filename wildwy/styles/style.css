@@ -41,6 +41,8 @@ nav {
 
 main {
     background-color: #2C462B;
+    margin-top: -70px;
+    padding-top: 70px;
 }
 div {
     background-color: #E79556;
@@ -64,10 +66,6 @@ h3 {
     font-size: 28px;
     font-family: "Ubuntu", Helvetica, sans-serif;
     color:#E79556;
-}
-#index-main {
-    margin-top: -70px;
-    padding-top: 70px;
 }
 #index-main h3 {
     text-align: center;
@@ -111,15 +109,26 @@ footer a:hover {
     background-color: #7BE0AD;
 }
 
+/* subpage */
+#page-name {
+    text-align: center;
+    font-size: 60px;
+}
+.tab-box {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 5%;
+}
+
 /* Style the tab */
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-  }
+    border: 3px solid #2C462B;
+    background-color: #E79556;
+}
   
   /* Style the buttons that are used to open the tab content */
-  .tab button {
+.tab button {
     background-color: inherit;
     float: left;
     border: none;
@@ -127,22 +136,40 @@ footer a:hover {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-  }
+    color: #2C462B;
+}
   
   /* Change background color of buttons on hover */
-  .tab button:hover {
+.tab button:hover {
     background-color: #ddd;
-  }
+}
   
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #7BE0AD;
+}
+
+/* Style the tab content */
+.tabcontent {
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    background-color: #E79556;
+    border: 3px solid #2C462B;
     border-top: none;
-  }
+}   
+.tab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.tab-grid img {
+    grid-column: 2/3;
+    margin: auto auto;
+}
+#nettle img {
+    width: 50%;
+}
+#pine img {
+    width: 100%;
+}
+#paint img {
+    width: 50%;
+}
